@@ -22,6 +22,6 @@ router.get('/tasks/user/:idUser', checkJWT, getTasksByUser);
 router.put('/tasks/:id', checkJWT, updateTask);
 router.delete('/tasks/:id', checkJWT, deleteTask);
 
-router.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerSetup));
+router.use('', swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 
 export default router;
