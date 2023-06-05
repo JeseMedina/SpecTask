@@ -1,0 +1,16 @@
+{
+  "builds": [
+    { "src": "api/package.json", "use": "@vercel/node" },
+    { "src": "client/package.json", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/dist/index.js" },
+    { "src": "/(.*)", "dest": "client/build/$1" }
+  ],
+  "install": {
+    "include": [
+      "api/**",
+      "client/**"
+    ]
+  }
+}
