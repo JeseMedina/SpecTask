@@ -6,11 +6,5 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "api/dist/index.js" },
     { "src": "/(.*)", "dest": "client/build/$1" }
-  ],
-  "install": {
-    "include": [
-      "api/**",
-      "client/**"
-    ]
-  }
+  ]
 }
