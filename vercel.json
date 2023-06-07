@@ -1,5 +1,0 @@
-{
-  "routes": [
-    { "src": "/(.*)", "dest": "api/dist/index.js" }
-  ]
-}
