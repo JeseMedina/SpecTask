@@ -4,17 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "turbo build",
-    "api:build": "cd api && npm run build",
-    "client:build": "cd client && npm run build",
-    "start": "cd api && npm run start"
+    "build": "npm run build --workspace=client && npm run build --workspace=api",
+    "start": "npm run start --workspace=api",
+    "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "turbo": "^1.10.2"
-  },
   "workspaces": [
     "api",
     "client"
